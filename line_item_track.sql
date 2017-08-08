@@ -1,5 +1,4 @@
-select t.Name, il.InvoiceLineId
-from Track t
-	left join InvoiceLine il
-		on t.TrackId = il.TrackId
-
+select il.InvoiceId, il.InvoiceLineId, t.Name
+from InvoiceLine il
+	left join Track t
+		on il.TrackId = t.TrackId
